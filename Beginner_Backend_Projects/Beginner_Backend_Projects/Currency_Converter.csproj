@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81858A25-D531-4039-A18C-77E543ED638D}</ProjectGuid>
+    <ProjectGuid>{D2C469EA-4102-43BD-9733-C8417497F7E7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Currency_Converter</RootNamespace>
-    <AssemblyName>Currency_Converter</AssemblyName>
+    <RootNamespace>Beginner_Backend_Projects</RootNamespace>
+    <AssemblyName>Beginner_Backend_Projects</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
