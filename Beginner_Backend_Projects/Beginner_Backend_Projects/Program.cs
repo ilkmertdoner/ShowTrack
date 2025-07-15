@@ -97,7 +97,6 @@ namespace Currency_Converter
             double fromRate = exchangeRates[fromCurrency];
             double toRate = exchangeRates[toCurrency];
 
-            // Convert amount to USD first, then to target currency
             double amountInUsd = amount / fromRate;
             double convertedAmount = amountInUsd * toRate;
 
