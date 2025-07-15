@@ -10,7 +10,7 @@ namespace Currency_Converter
     {
         static void Main(string[] args)
         {
-            //Currency Projecta
+            //Currency Projectas
         }
     }
 }
