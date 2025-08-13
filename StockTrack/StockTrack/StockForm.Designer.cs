@@ -57,8 +57,6 @@
             this.groupBoxDelete = new System.Windows.Forms.GroupBox();
             this.textBoxDeleteID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxAddPI = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxAdd.SuspendLayout();
             this.groupBoxUpdate.SuspendLayout();
@@ -67,9 +65,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(839, 288);
@@ -77,7 +78,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(79, 203);
+            this.buttonAdd.Location = new System.Drawing.Point(80, 186);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(100, 36);
             this.buttonAdd.TabIndex = 6;
@@ -87,14 +88,14 @@
             // 
             // textBoxAddPN
             // 
-            this.textBoxAddPN.Location = new System.Drawing.Point(120, 55);
+            this.textBoxAddPN.Location = new System.Drawing.Point(121, 38);
             this.textBoxAddPN.Name = "textBoxAddPN";
             this.textBoxAddPN.Size = new System.Drawing.Size(100, 22);
             this.textBoxAddPN.TabIndex = 2;
             // 
             // textBoxAddCategory
             // 
-            this.textBoxAddCategory.Location = new System.Drawing.Point(121, 91);
+            this.textBoxAddCategory.Location = new System.Drawing.Point(122, 74);
             this.textBoxAddCategory.Name = "textBoxAddCategory";
             this.textBoxAddCategory.Size = new System.Drawing.Size(100, 22);
             this.textBoxAddCategory.TabIndex = 3;
@@ -102,7 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 58);
+            this.label1.Location = new System.Drawing.Point(22, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 3;
@@ -111,7 +112,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 94);
+            this.label2.Location = new System.Drawing.Point(53, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 3;
@@ -119,14 +120,14 @@
             // 
             // textBoxAddQuantity
             // 
-            this.textBoxAddQuantity.Location = new System.Drawing.Point(121, 130);
+            this.textBoxAddQuantity.Location = new System.Drawing.Point(122, 113);
             this.textBoxAddQuantity.Name = "textBoxAddQuantity";
             this.textBoxAddQuantity.Size = new System.Drawing.Size(100, 22);
             this.textBoxAddQuantity.TabIndex = 4;
             // 
             // textBoxAddUP
             // 
-            this.textBoxAddUP.Location = new System.Drawing.Point(120, 166);
+            this.textBoxAddUP.Location = new System.Drawing.Point(121, 149);
             this.textBoxAddUP.Name = "textBoxAddUP";
             this.textBoxAddUP.Size = new System.Drawing.Size(100, 22);
             this.textBoxAddUP.TabIndex = 5;
@@ -134,7 +135,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 133);
+            this.label3.Location = new System.Drawing.Point(60, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 3;
@@ -143,7 +144,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 169);
+            this.label4.Location = new System.Drawing.Point(51, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 3;
@@ -216,7 +217,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(83, 192);
+            this.buttonDelete.Location = new System.Drawing.Point(84, 157);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(100, 36);
             this.buttonDelete.TabIndex = 15;
@@ -226,7 +227,7 @@
             // 
             // textBoxDeletePN
             // 
-            this.textBoxDeletePN.Location = new System.Drawing.Point(126, 100);
+            this.textBoxDeletePN.Location = new System.Drawing.Point(126, 110);
             this.textBoxDeletePN.Name = "textBoxDeletePN";
             this.textBoxDeletePN.Size = new System.Drawing.Size(100, 22);
             this.textBoxDeletePN.TabIndex = 14;
@@ -234,7 +235,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(32, 103);
+            this.label13.Location = new System.Drawing.Point(32, 113);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 16);
             this.label13.TabIndex = 3;
@@ -251,14 +252,12 @@
             // 
             // groupBoxAdd
             // 
-            this.groupBoxAdd.Controls.Add(this.textBoxAddPI);
             this.groupBoxAdd.Controls.Add(this.textBoxAddPN);
             this.groupBoxAdd.Controls.Add(this.buttonAdd);
             this.groupBoxAdd.Controls.Add(this.textBoxAddQuantity);
             this.groupBoxAdd.Controls.Add(this.label4);
             this.groupBoxAdd.Controls.Add(this.textBoxAddCategory);
             this.groupBoxAdd.Controls.Add(this.textBoxAddUP);
-            this.groupBoxAdd.Controls.Add(this.label10);
             this.groupBoxAdd.Controls.Add(this.label1);
             this.groupBoxAdd.Controls.Add(this.label2);
             this.groupBoxAdd.Controls.Add(this.label3);
@@ -336,22 +335,6 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Product Id";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Product Id";
-            // 
-            // textBoxAddPI
-            // 
-            this.textBoxAddPI.Location = new System.Drawing.Point(120, 21);
-            this.textBoxAddPI.Name = "textBoxAddPI";
-            this.textBoxAddPI.Size = new System.Drawing.Size(100, 22);
-            this.textBoxAddPI.TabIndex = 1;
-            // 
             // StockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -407,7 +390,5 @@
         private System.Windows.Forms.Label labelUpdateID;
         private System.Windows.Forms.TextBox textBoxDeleteID;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxAddPI;
-        private System.Windows.Forms.Label label10;
     }
 }

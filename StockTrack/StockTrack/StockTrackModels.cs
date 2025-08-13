@@ -28,6 +28,18 @@ namespace StockTrack
             UnitPrice = _UnitPrice;
             Quantity = _Quantity;
         }
+        
+        public Product(string _ProductName, string _Category, decimal _UnitPrice, int _Quantity)
+        {
+            if (string.IsNullOrWhiteSpace(_ProductName)) MessageBox.Show("Product Name cannot be empty.");
+            if (string.IsNullOrWhiteSpace(_Category)) MessageBox.Show("Category cannot be empty.");
+            if (_UnitPrice < 0) MessageBox.Show("Unit Price cannot be negative.");
+
+            ProductName = _ProductName;
+            Category = _Category;
+            UnitPrice = _UnitPrice;
+            Quantity = _Quantity;
+        }
 
         public Product(int _ProductID, string _ProductName)
         {

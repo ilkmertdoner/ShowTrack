@@ -78,8 +78,9 @@ namespace StockTrack
                 Connection.Open();
             }
             
-            SqlCommand command = new SqlCommand("DELETE FROM ProductInventory WHERE Id = @Id", Connection);
+            SqlCommand command = new SqlCommand("DELETE FROM ProductInventory WHERE Id = @Id AND ProductName = @Name", Connection);
             command.Parameters.AddWithValue("@Id", product.ProductID);
+            command.Parameters.AddWithValue("@Name", product.ProductName);
             command.ExecuteNonQuery();
             Connection.Close();
         }

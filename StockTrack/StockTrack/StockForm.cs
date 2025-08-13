@@ -26,9 +26,8 @@ namespace StockTrack
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Product product = new Product(int.Parse(textBoxAddPI.Text), textBoxAddPN.Text, textBoxAddCategory.Text, decimal.Parse(textBoxAddUP.Text),
+            Product product = new Product(textBoxAddPN.Text, textBoxAddCategory.Text, decimal.Parse(textBoxAddUP.Text),
                 int.Parse(textBoxAddQuantity.Text));
-            
             
             ProductDb.AddProduct(product);
             dataGridView1.DataSource = ProductDb.GetProductList();
@@ -45,7 +44,7 @@ namespace StockTrack
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            Product product = new Product(int.Parse(textBoxDeleteID.Text), textBoxUpdatePN.Text);
+            Product product = new Product(int.Parse(textBoxDeleteID.Text), textBoxDeletePN.Text);
 
             ProductDb.DeleteProduct(product);
             dataGridView1.DataSource= ProductDb.GetProductList();
@@ -53,7 +52,7 @@ namespace StockTrack
 
         private void StockForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }
