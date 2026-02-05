@@ -33,9 +33,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,17 +47,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            CloseButton = new Guna.UI2.WinForms.Guna2ControlBox();
             LoginButton = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             SignUpLabel = new Label();
             ForgotPasswordLabel = new Label();
             label2 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            MinimizeButton = new Guna.UI2.WinForms.Guna2ControlBox();
+            PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            UsernameOrEmailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            DragPanel = new Guna.UI2.WinForms.Guna2Panel();
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2Panel1.SuspendLayout();
@@ -67,30 +67,43 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(25, 25, 25);
+            guna2Panel1.Controls.Add(CloseButton);
             guna2Panel1.Controls.Add(LoginButton);
             guna2Panel1.Controls.Add(label3);
             guna2Panel1.Controls.Add(SignUpLabel);
             guna2Panel1.Controls.Add(ForgotPasswordLabel);
             guna2Panel1.Controls.Add(label2);
             guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.Controls.Add(guna2ControlBox2);
-            guna2Panel1.Controls.Add(guna2ControlBox1);
-            guna2Panel1.Controls.Add(guna2Panel2);
-            guna2Panel1.Controls.Add(guna2TextBox2);
-            guna2Panel1.Controls.Add(guna2TextBox1);
+            guna2Panel1.Controls.Add(MinimizeButton);
+            guna2Panel1.Controls.Add(PasswordTextBox);
+            guna2Panel1.Controls.Add(UsernameOrEmailTextBox);
+            guna2Panel1.Controls.Add(DragPanel);
             guna2Panel1.CustomizableEdges = customizableEdges15;
+            guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.ForeColor = SystemColors.ControlDarkDark;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(449, 498);
+            guna2Panel1.Size = new Size(449, 492);
             guna2Panel1.TabIndex = 0;
+            // 
+            // CloseButton
+            // 
+            CloseButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            CloseButton.CustomizableEdges = customizableEdges1;
+            CloseButton.FillColor = Color.FromArgb(192, 0, 0);
+            CloseButton.IconColor = Color.White;
+            CloseButton.Location = new Point(402, 0);
+            CloseButton.Name = "CloseButton";
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            CloseButton.Size = new Size(47, 36);
+            CloseButton.TabIndex = 8;
             // 
             // LoginButton
             // 
             LoginButton.AutoRoundedCorners = true;
             LoginButton.BorderRadius = 27;
-            LoginButton.CustomizableEdges = customizableEdges1;
+            LoginButton.CustomizableEdges = customizableEdges3;
             LoginButton.DisabledState.BorderColor = Color.DarkGray;
             LoginButton.DisabledState.CustomBorderColor = Color.DarkGray;
             LoginButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -100,10 +113,11 @@
             LoginButton.ForeColor = Color.White;
             LoginButton.Location = new Point(83, 328);
             LoginButton.Name = "LoginButton";
-            LoginButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            LoginButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             LoginButton.Size = new Size(286, 56);
             LoginButton.TabIndex = 6;
             LoginButton.Text = "Login";
+            LoginButton.Click += LoginButton_Click;
             // 
             // label3
             // 
@@ -126,6 +140,7 @@
             SignUpLabel.Size = new Size(70, 23);
             SignUpLabel.TabIndex = 5;
             SignUpLabel.Text = "Sign Up";
+            SignUpLabel.Click += SignUpLabel_Click;
             // 
             // ForgotPasswordLabel
             // 
@@ -137,6 +152,7 @@
             ForgotPasswordLabel.Size = new Size(143, 23);
             ForgotPasswordLabel.TabIndex = 5;
             ForgotPasswordLabel.Text = "Forgot Password?";
+            ForgotPasswordLabel.Click += ForgotPasswordLabel_Click;
             // 
             // label2
             // 
@@ -154,7 +170,7 @@
             guna2PictureBox1.BackColor = Color.Transparent;
             guna2PictureBox1.BackgroundImage = (Image)resources.GetObject("guna2PictureBox1.BackgroundImage");
             guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            guna2PictureBox1.CustomizableEdges = customizableEdges3;
+            guna2PictureBox1.CustomizableEdges = customizableEdges5;
             guna2PictureBox1.ErrorImage = Properties.Resources.ShowTrackLogo_1;
             guna2PictureBox1.FillColor = Color.FromArgb(35, 35, 35);
             guna2PictureBox1.Image = Properties.Resources.ShowTrackLogo_1;
@@ -162,109 +178,95 @@
             guna2PictureBox1.InitialImage = Properties.Resources.ShowTrackLogo_1;
             guna2PictureBox1.Location = new Point(121, 42);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2PictureBox1.Size = new Size(216, 84);
             guna2PictureBox1.TabIndex = 4;
             guna2PictureBox1.TabStop = false;
             // 
-            // guna2ControlBox2
+            // MinimizeButton
             // 
-            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox2.CustomizableEdges = customizableEdges5;
-            guna2ControlBox2.FillColor = Color.FromArgb(192, 0, 0);
-            guna2ControlBox2.IconColor = Color.White;
-            guna2ControlBox2.Location = new Point(403, 0);
-            guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ControlBox2.Size = new Size(46, 36);
-            guna2ControlBox2.TabIndex = 3;
+            MinimizeButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            MinimizeButton.BackColor = Color.Black;
+            MinimizeButton.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            MinimizeButton.CustomizableEdges = customizableEdges7;
+            MinimizeButton.FillColor = Color.FromArgb(35, 35, 35);
+            MinimizeButton.IconColor = Color.White;
+            MinimizeButton.Location = new Point(357, 0);
+            MinimizeButton.Name = "MinimizeButton";
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            MinimizeButton.Size = new Size(46, 36);
+            MinimizeButton.TabIndex = 3;
             // 
-            // guna2ControlBox1
+            // PasswordTextBox
             // 
-            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.BackColor = Color.Black;
-            guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox1.CustomizableEdges = customizableEdges7;
-            guna2ControlBox1.FillColor = Color.FromArgb(35, 35, 35);
-            guna2ControlBox1.IconColor = Color.White;
-            guna2ControlBox1.Location = new Point(357, 0);
-            guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ControlBox1.Size = new Size(46, 36);
-            guna2ControlBox1.TabIndex = 3;
+            PasswordTextBox.BorderColor = Color.FromArgb(0, 192, 0);
+            PasswordTextBox.BorderRadius = 15;
+            PasswordTextBox.CustomizableEdges = customizableEdges9;
+            PasswordTextBox.DefaultText = "";
+            PasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            PasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            PasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            PasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            PasswordTextBox.FillColor = Color.FromArgb(45, 45, 45);
+            PasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            PasswordTextBox.Font = new Font("Segoe UI", 9F);
+            PasswordTextBox.ForeColor = Color.WhiteSmoke;
+            PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            PasswordTextBox.IconLeftSize = new Size(30, 30);
+            PasswordTextBox.Location = new Point(83, 250);
+            PasswordTextBox.Margin = new Padding(3, 4, 3, 4);
+            PasswordTextBox.Name = "PasswordTextBox";
+            PasswordTextBox.PlaceholderText = "Password";
+            PasswordTextBox.SelectedText = "";
+            PasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            PasswordTextBox.Size = new Size(286, 60);
+            PasswordTextBox.TabIndex = 2;
+            PasswordTextBox.TextOffset = new Point(3, 0);
             // 
-            // guna2Panel2
+            // UsernameOrEmailTextBox
             // 
-            guna2Panel2.BackColor = Color.Black;
-            guna2Panel2.CustomizableEdges = customizableEdges9;
-            guna2Panel2.FillColor = Color.FromArgb(35, 35, 35);
-            guna2Panel2.Location = new Point(0, 0);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel2.Size = new Size(358, 36);
-            guna2Panel2.TabIndex = 2;
+            UsernameOrEmailTextBox.BorderColor = Color.FromArgb(0, 192, 0);
+            UsernameOrEmailTextBox.BorderRadius = 15;
+            UsernameOrEmailTextBox.CustomizableEdges = customizableEdges11;
+            UsernameOrEmailTextBox.DefaultText = "";
+            UsernameOrEmailTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            UsernameOrEmailTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            UsernameOrEmailTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            UsernameOrEmailTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            UsernameOrEmailTextBox.FillColor = Color.FromArgb(45, 45, 45);
+            UsernameOrEmailTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            UsernameOrEmailTextBox.Font = new Font("Segoe UI", 9F);
+            UsernameOrEmailTextBox.ForeColor = Color.WhiteSmoke;
+            UsernameOrEmailTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            UsernameOrEmailTextBox.IconLeft = Properties.Resources.user;
+            UsernameOrEmailTextBox.IconLeftOffset = new Point(3, 0);
+            UsernameOrEmailTextBox.IconLeftSize = new Size(30, 30);
+            UsernameOrEmailTextBox.Location = new Point(83, 170);
+            UsernameOrEmailTextBox.Margin = new Padding(3, 4, 3, 4);
+            UsernameOrEmailTextBox.Name = "UsernameOrEmailTextBox";
+            UsernameOrEmailTextBox.PlaceholderForeColor = Color.DarkGray;
+            UsernameOrEmailTextBox.PlaceholderText = "Username or Email";
+            UsernameOrEmailTextBox.SelectedText = "";
+            UsernameOrEmailTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            UsernameOrEmailTextBox.Size = new Size(286, 60);
+            UsernameOrEmailTextBox.TabIndex = 1;
+            UsernameOrEmailTextBox.TextOffset = new Point(3, 0);
             // 
-            // guna2TextBox2
+            // DragPanel
             // 
-            guna2TextBox2.BorderColor = Color.FromArgb(0, 192, 0);
-            guna2TextBox2.BorderRadius = 15;
-            guna2TextBox2.CustomizableEdges = customizableEdges11;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(45, 45, 45);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.ForeColor = Color.WhiteSmoke;
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.IconLeft = Properties.Resources.locked;
-            guna2TextBox2.IconLeftOffset = new Point(3, 0);
-            guna2TextBox2.IconLeftSize = new Size(30, 30);
-            guna2TextBox2.Location = new Point(83, 250);
-            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "Password";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox2.Size = new Size(286, 60);
-            guna2TextBox2.TabIndex = 1;
-            guna2TextBox2.TextOffset = new Point(3, 0);
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.BorderColor = Color.FromArgb(0, 192, 0);
-            guna2TextBox1.BorderRadius = 15;
-            guna2TextBox1.CustomizableEdges = customizableEdges13;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.FromArgb(45, 45, 45);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.ForeColor = Color.WhiteSmoke;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.IconLeft = Properties.Resources.user;
-            guna2TextBox1.IconLeftOffset = new Point(3, 0);
-            guna2TextBox1.IconLeftSize = new Size(30, 30);
-            guna2TextBox1.Location = new Point(83, 170);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderForeColor = Color.DarkGray;
-            guna2TextBox1.PlaceholderText = "Username";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox1.Size = new Size(286, 60);
-            guna2TextBox1.TabIndex = 1;
-            guna2TextBox1.TextOffset = new Point(3, 0);
+            DragPanel.BackColor = Color.Black;
+            DragPanel.CustomizableEdges = customizableEdges13;
+            DragPanel.FillColor = Color.FromArgb(35, 35, 35);
+            DragPanel.Location = new Point(0, 0);
+            DragPanel.Name = "DragPanel";
+            DragPanel.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            DragPanel.Size = new Size(358, 36);
+            DragPanel.TabIndex = 7;
             // 
             // guna2DragControl1
             // 
             guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            guna2DragControl1.TargetControl = guna2Panel2;
+            guna2DragControl1.TargetControl = DragPanel;
             guna2DragControl1.TransparentWhileDrag = false;
             // 
             // guna2BorderlessForm1
@@ -277,9 +279,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(449, 499);
+            ClientSize = new Size(449, 492);
             Controls.Add(guna2Panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
@@ -291,20 +294,20 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox PasswordTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox UsernameOrEmailTextBox;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox MinimizeButton;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label label3;
         private Label label2;
-        private Label label1;
         private Label SignUpLabel;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button LoginButton;
         private Label ForgotPasswordLabel;
+        private Guna.UI2.WinForms.Guna2Panel DragPanel;
+        private Guna.UI2.WinForms.Guna2ControlBox CloseButton;
     }
 }
