@@ -230,11 +230,13 @@
             ConfirmPasswordTextBox.Font = new Font("Segoe UI", 9F);
             ConfirmPasswordTextBox.ForeColor = Color.WhiteSmoke;
             ConfirmPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ConfirmPasswordTextBox.IconLeft = Properties.Resources._lock;
             ConfirmPasswordTextBox.IconLeftOffset = new Point(3, 0);
             ConfirmPasswordTextBox.IconLeftSize = new Size(30, 30);
             ConfirmPasswordTextBox.Location = new Point(82, 401);
             ConfirmPasswordTextBox.Margin = new Padding(3, 4, 3, 4);
             ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            ConfirmPasswordTextBox.PasswordChar = '●';
             ConfirmPasswordTextBox.PlaceholderText = "Confirm Password";
             ConfirmPasswordTextBox.SelectedText = "";
             ConfirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -257,8 +259,12 @@
             PasswordTextBox.Font = new Font("Segoe UI", 9F);
             PasswordTextBox.ForeColor = Color.WhiteSmoke;
             PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            PasswordTextBox.IconLeft = Properties.Resources._lock;
             PasswordTextBox.IconLeftOffset = new Point(3, 0);
             PasswordTextBox.IconLeftSize = new Size(30, 30);
+            PasswordTextBox.IconRight = Properties.Resources.crossed_eye;
+            PasswordTextBox.IconRightOffset = new Point(3, 0);
+            PasswordTextBox.IconRightSize = new Size(30, 30);
             PasswordTextBox.Location = new Point(82, 325);
             PasswordTextBox.Margin = new Padding(3, 4, 3, 4);
             PasswordTextBox.Name = "PasswordTextBox";
@@ -268,6 +274,7 @@
             PasswordTextBox.Size = new Size(286, 60);
             PasswordTextBox.TabIndex = 3;
             PasswordTextBox.TextOffset = new Point(3, 0);
+            PasswordTextBox.IconRightClick += PasswordTextBox_IconRightClick;
             // 
             // EmailTextBox
             // 

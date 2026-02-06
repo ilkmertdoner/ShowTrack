@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using ShowTrack.Business;
 using ShowTrack.DataAccess;
 using ShowTrack.Entity;
+using ShowTrack.Properties;
 
 namespace ShowTrack
 {
@@ -75,6 +76,23 @@ namespace ShowTrack
                 loginForm.ShowDialog();
             }
             this.Close();
+        }
+
+        private void PasswordTextBox_IconRightClick(object sender, EventArgs e)
+        {
+            bool isHidden = false;
+            if (isHidden)
+            {
+                PasswordTextBox.PasswordChar = '\0';
+                isHidden = false;
+                PasswordTextBox.IconRight = Resources.eye;
+            }
+            else
+            {
+                PasswordTextBox.PasswordChar = '●';
+                isHidden = true;
+                PasswordTextBox.IconRight = Resources.crossed_eye;
+            }
         }
     }
 }

@@ -25,6 +25,16 @@ namespace ShowTrack.DataAccess
             }
         }
 
+        public void UpdatePassword(int userId, string newPasswordHash)
+        {
+            var user = GetById(userId);
+            if (user != null)
+            {
+                user.Password = newPasswordHash;
+                _context.SaveChanges();
+            }
+        }
+
         public User? GetByEmail(string email)
         {
             return _context.User.FirstOrDefault(u => u.Email == email);

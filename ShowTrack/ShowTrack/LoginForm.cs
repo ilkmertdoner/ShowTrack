@@ -1,5 +1,6 @@
 using ShowTrack.Business;
 using ShowTrack.DataAccess;
+using ShowTrack.Properties;
 
 namespace ShowTrack
 {
@@ -10,6 +11,7 @@ namespace ShowTrack
             InitializeComponent();
         }
 
+        bool isHidden = false;
         private void LoginButton_Click(object sender, EventArgs e)
         {
             var repo = new UserRepository();
@@ -50,6 +52,23 @@ namespace ShowTrack
                 passwordReset.ShowDialog();
             }
             this.Close();
+        }
+
+        private void PasswordTextBox_IconRightClick(object sender, EventArgs e)
+        {
+
+            if (isHidden)
+            {
+                PasswordTextBox.PasswordChar = '\0';
+                isHidden = false;
+                PasswordTextBox.IconRight = Properties.Resources.eye;
+            }
+            else
+            {
+                PasswordTextBox.PasswordChar = '●';
+                isHidden = true;
+                PasswordTextBox.IconRight = Properties.Resources.crossed_eye;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using ShowTrack.Entity;
@@ -16,8 +17,8 @@ namespace ShowTrack.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // Update the connection string as per your local database configuration
-                optionsBuilder.UseSqlServer("ENTER YOUR LOCAL DATABASE NAME;Initial Catalog=ShowTrack;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;");
+                var settings = ConfigurationManager.ConnectionStrings["ShowTrackConnection"];
+                optionsBuilder.UseSqlServer(settings.ConnectionString);
             }
         }
 

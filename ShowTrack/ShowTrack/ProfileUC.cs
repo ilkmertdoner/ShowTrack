@@ -33,9 +33,18 @@ namespace ShowTrack
 
         }
 
-        private void ProfileUC_Load(object sender, EventArgs e)
+        private void LogoutButton_Click(object sender, EventArgs e)
         {
-            
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                UserSession.CurrentUser = null;
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+                this.FindForm().Close();
+            }
         }
     }
 }

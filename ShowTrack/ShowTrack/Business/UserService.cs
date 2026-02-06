@@ -41,13 +41,13 @@ namespace ShowTrack.Business
 
         public string Register(User user, string ConfirmPassword)
         {
-            if(!(IsValidEmail(user.Email))) return "Invalid email format.";
+            if (!(IsValidEmail(user.Email))) return "Invalid email format.";
 
-            if(!(_userRepository.IsEmailAvailable(user.Email))) return "Email is already registered.";
+            if (!(_userRepository.IsEmailAvailable(user.Email))) return "Email is already registered.";
 
             if (!(_userRepository.IsUsernameAvailable(user.Username))) return "Username is already taken.";
 
-            if(string.IsNullOrEmpty(user.Username)) return "Username cannot be empty.";
+            if (string.IsNullOrEmpty(user.Username)) return "Username cannot be empty.";
 
             if (user.Password.Length < 6) return "Password must be at least 6 characters long.";
 
@@ -64,6 +64,33 @@ namespace ShowTrack.Business
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
             return Regex.IsMatch(email, pattern);
+        }
+
+        public bool ChangePasswordControl(int userId, string EmailorPassword,string newPassword, string confirmPassword)
+        {
+            if(userId == 0) return false;
+
+            if (string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword) || 
+                string.IsNullOrEmpty(EmailorPassword)) { return false; }
+
+            {
+                MessageBox.Show("Password fields cannot be empty.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+
+            if(newPassword.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+            
+            if (!(newPassword == confirmPassword))
+            {
+                MessageBox.Show("Passwords do not match.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
 }

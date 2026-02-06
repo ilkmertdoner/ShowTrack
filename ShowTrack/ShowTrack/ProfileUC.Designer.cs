@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            LogoutButton = new Guna.UI2.WinForms.Guna2ImageButton();
             ChangePasswordButton = new Guna.UI2.WinForms.Guna2Button();
             ChangeEmailButton = new Guna.UI2.WinForms.Guna2Button();
             MyListPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -50,26 +52,46 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Controls.Add(LogoutButton);
             guna2Panel1.Controls.Add(ChangePasswordButton);
             guna2Panel1.Controls.Add(ChangeEmailButton);
-            guna2Panel1.Controls.Add(MyListPanel);
             guna2Panel1.Controls.Add(UsernameLabel);
             guna2Panel1.Controls.Add(guna2Separator1);
             guna2Panel1.Controls.Add(guna2CirclePictureBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges8;
+            guna2Panel1.Controls.Add(MyListPanel);
+            guna2Panel1.CustomizableEdges = customizableEdges9;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.FillColor = Color.FromArgb(35, 35, 35);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Panel1.Size = new Size(1491, 804);
             guna2Panel1.TabIndex = 0;
+            // 
+            // LogoutButton
+            // 
+            LogoutButton.BackColor = Color.Transparent;
+            LogoutButton.BackgroundImage = Properties.Resources.logout;
+            LogoutButton.BackgroundImageLayout = ImageLayout.Zoom;
+            LogoutButton.CheckedState.ImageSize = new Size(64, 64);
+            LogoutButton.HoverState.ImageSize = new Size(64, 64);
+            LogoutButton.Image = Properties.Resources.logout;
+            LogoutButton.ImageOffset = new Point(0, 0);
+            LogoutButton.ImageRotate = 0F;
+            LogoutButton.ImageSize = new Size(0, 0);
+            LogoutButton.Location = new Point(1395, 122);
+            LogoutButton.Name = "LogoutButton";
+            LogoutButton.PressedState.ImageSize = new Size(64, 64);
+            LogoutButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            LogoutButton.Size = new Size(52, 37);
+            LogoutButton.TabIndex = 7;
+            LogoutButton.Click += LogoutButton_Click;
             // 
             // ChangePasswordButton
             // 
             ChangePasswordButton.AutoRoundedCorners = true;
             ChangePasswordButton.BackColor = Color.Transparent;
-            ChangePasswordButton.CustomizableEdges = customizableEdges1;
+            ChangePasswordButton.CustomizableEdges = customizableEdges2;
             ChangePasswordButton.DisabledState.BorderColor = Color.DarkGray;
             ChangePasswordButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ChangePasswordButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -77,9 +99,9 @@
             ChangePasswordButton.FillColor = Color.FromArgb(45, 45, 45);
             ChangePasswordButton.Font = new Font("Segoe UI", 9F);
             ChangePasswordButton.ForeColor = Color.White;
-            ChangePasswordButton.Location = new Point(991, 113);
+            ChangePasswordButton.Location = new Point(933, 113);
             ChangePasswordButton.Name = "ChangePasswordButton";
-            ChangePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            ChangePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges3;
             ChangePasswordButton.Size = new Size(225, 56);
             ChangePasswordButton.TabIndex = 6;
             ChangePasswordButton.Text = "Change Password";
@@ -89,7 +111,7 @@
             // 
             ChangeEmailButton.AutoRoundedCorners = true;
             ChangeEmailButton.BackColor = Color.Transparent;
-            ChangeEmailButton.CustomizableEdges = customizableEdges3;
+            ChangeEmailButton.CustomizableEdges = customizableEdges4;
             ChangeEmailButton.DisabledState.BorderColor = Color.DarkGray;
             ChangeEmailButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ChangeEmailButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -97,9 +119,9 @@
             ChangeEmailButton.FillColor = Color.FromArgb(45, 45, 45);
             ChangeEmailButton.Font = new Font("Segoe UI", 9F);
             ChangeEmailButton.ForeColor = Color.White;
-            ChangeEmailButton.Location = new Point(1222, 113);
+            ChangeEmailButton.Location = new Point(1164, 113);
             ChangeEmailButton.Name = "ChangeEmailButton";
-            ChangeEmailButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ChangeEmailButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
             ChangeEmailButton.Size = new Size(225, 56);
             ChangeEmailButton.TabIndex = 6;
             ChangeEmailButton.Text = "Change Email";
@@ -107,11 +129,11 @@
             // MyListPanel
             // 
             MyListPanel.AutoScroll = true;
-            MyListPanel.CustomizableEdges = customizableEdges5;
+            MyListPanel.CustomizableEdges = customizableEdges7;
             MyListPanel.FillColor = Color.FromArgb(40, 40, 40);
             MyListPanel.Location = new Point(45, 217);
             MyListPanel.Name = "MyListPanel";
-            MyListPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            MyListPanel.ShadowDecoration.CustomizableEdges = customizableEdges8;
             MyListPanel.Size = new Size(1402, 574);
             MyListPanel.TabIndex = 5;
             // 
@@ -144,7 +166,7 @@
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(45, 36);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(144, 133);
             guna2CirclePictureBox1.TabIndex = 0;
@@ -157,7 +179,6 @@
             Controls.Add(guna2Panel1);
             Name = "ProfileUC";
             Size = new Size(1491, 804);
-            Load += ProfileUC_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
@@ -174,5 +195,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button ChangeEmailButton;
         private Guna.UI2.WinForms.Guna2Button ChangePasswordButton;
+        private Guna.UI2.WinForms.Guna2ImageButton LogoutButton;
     }
 }
