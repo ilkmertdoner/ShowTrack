@@ -66,12 +66,11 @@ namespace ShowTrack.Business
             return Regex.IsMatch(email, pattern);
         }
 
-        public bool ChangePasswordControl(int userId, string EmailorPassword,string newPassword, string confirmPassword)
+        public bool ChangePasswordControl(int userId, string newPassword, string confirmPassword)
         {
             if(userId == 0) return false;
 
-            if (string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword) || 
-                string.IsNullOrEmpty(EmailorPassword)) { return false; }
+            if (string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword)) { return false; }
 
             {
                 MessageBox.Show("Password fields cannot be empty.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);

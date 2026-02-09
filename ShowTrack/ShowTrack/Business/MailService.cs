@@ -18,6 +18,7 @@ namespace ShowTrack.Business
         {
             _mailLogRepository = mailLogRepository;
         }
+        
         string email = ConfigurationManager.AppSettings["EmailUser"];
         string password = ConfigurationManager.AppSettings["EmailPassword"];
         public string SendVerificationCode(string TargetEmail)

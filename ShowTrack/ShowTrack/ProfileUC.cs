@@ -35,7 +35,7 @@ namespace ShowTrack
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", 
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -46,5 +46,10 @@ namespace ShowTrack
                 this.FindForm().Close();
             }
         }
+
+        private void ProfileUC_Load(object sender, EventArgs e)
+        {
+        }
+
     }
 }
